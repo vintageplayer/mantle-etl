@@ -134,11 +134,11 @@ def enrich_task(task, time_partitioning_field='block_timestamp', **kwargs):
 
 
 def run():
-	# load_task('blocks', 'json')
-	# load_task('transactions', 'json')
-	# load_task('receipts', 'json')
-	# load_task('logs', 'json')
-	# load_task('token_transfers', 'json')
+	load_task('blocks', 'json')
+	load_task('transactions', 'json')
+	load_task('receipts', 'json')
+	load_task('logs', 'json')
+	load_task('token_transfers', 'json')
 
 	enrich_task('blocks', time_partitioning_field='timestamp')
 	enrich_task('transactions', time_partitioning_field='timestamp')
